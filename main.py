@@ -9,7 +9,6 @@ text_introduse_delivery = """
 10:00 _ 22:00 - 1 km gacha bo`lgan buyurtmalar yetkazib berish narxi 5000 so`m\
 10:00 _ 22:00 - 3 km gacha  9000 so`m, keyingi har 1 km uchun - 1000 so`m Toshkent shahari bo`ylab.
 """
-a = ''
 
 
 @bot.message_handler(commands=["start"])
