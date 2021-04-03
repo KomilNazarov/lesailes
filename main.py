@@ -2,6 +2,7 @@ import telebot
 from telebot.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, KeyboardButton, InlineKeyboardButton
 from functions import *
 import os
+
 bot = telebot.TeleBot(os.environ.get("BOT_TOKEN"))
 
 text_introduse_delivery = """
@@ -9,6 +10,7 @@ text_introduse_delivery = """
 10:00 _ 22:00 - 3 km gacha  9000 so`m, keyingi har 1 km uchun - 1000 so`m Toshkent shahari bo`ylab.
 """
 a = ''
+
 
 @bot.message_handler(commands=["start"])
 def sart_message(message):
