@@ -7,7 +7,6 @@ from buttons_names import *
 bot = telebot.TeleBot(os.environ.get("BOT_TOKEN"))
 
 
-
 @bot.message_handler(commands=["start"])
 def sart_message(message):
 
