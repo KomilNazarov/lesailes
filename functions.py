@@ -1,4 +1,3 @@
-import telebot
 from telebot.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, KeyboardButton, InlineKeyboardButton
 from buttons_names import *
 
@@ -20,7 +19,7 @@ def dostavka():
 
 
 def sent_location():
-    loc_markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+    loc_markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
     sent_geo = KeyboardButton(LOCATION, request_location=True)
     loc_markup.row(sent_geo)
     loc_markup.add(*[OK, BACK])
@@ -31,3 +30,15 @@ def crete_menyu():
     menyu_markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
     menyu_markup.add(*[KeyboardButton(text=text) for text in menyu])
     return menyu_markup
+
+
+def create_buttons_in_info():
+    info_markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+    info_markup.add(*[BRANCHES, PUBLIC_OFFER, BACK])
+    return info_markup
+
+
+def create_buttons_in_branches():
+    branches_markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+    branches_markup.add(*[KeyboardButton(text) for text in branches_button])
+    branches_markup.row(BACK)
