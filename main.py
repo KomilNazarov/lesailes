@@ -1,9 +1,10 @@
 import telebot
+import os
 from functions import *
 from texts import *
 from buttons_names import *
 
-bot = telebot.TeleBot("1731457221:AAHFz9tnIA6xQYWqZXD9O9I7sw4QXj9LOI0")
+bot = telebot.TeleBot(os.environ.get("BOT_TOKEN"))
 
 
 
